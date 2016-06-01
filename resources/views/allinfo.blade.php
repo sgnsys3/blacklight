@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>All infomation</title>
-        <meta http-equiv="refresh" content="2" />
+        <!-- <meta http-equiv="refresh" content="2" /> -->
     </head>
     <body>
         <div class="container">
@@ -31,7 +31,8 @@
                                 <td>{{ $user->firstname }}</td>
                                 <td>{{ $user->lastname }}</td>
                                 <td>{{ $user->nickname }}</td>
-                                <td><a href="{{ url('profile/edit/') }}/{{$user->id}}">แก้ไขข้อมูล</a></td>
+                                <td><button type="button" class="btn-primary btn-block" onclick="newPage({{ $user->id }})">Edit</button>
+                                </td>
                                 <td>
                                     <form method="post" enctype="multipart/form-data">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -63,5 +64,8 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('js/caster.js') }}"></script>
+    <script src="{{ URL::asset('js/jquery-2.2.4.min.js') }}"></script>
+    
     </body>
 </html>

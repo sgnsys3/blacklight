@@ -16,7 +16,11 @@
                         <div class="alert alert-success">ส่งข้อมูลเรียบร้อยแล้ว</div>
                     @endif
                     <div class="row">
-                    <center><img src="{{ url('download/img') }}/{{$image}}" height="250"></center>
+                    <center>
+                        <div id="newrotate">
+                            <img src="{{ url('download/img') }}/{{$image}}" height="250" class="newrotate">
+                        </div>
+                    </center>
                     <hr class="colorgraph">
                         <div class="col-xs-12 col-sm-6 col-md-6">
                             <div class="form-group">
@@ -84,11 +88,12 @@
 
 
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
-
+    <link rel="stylesheet" href="{{ URL::asset('css/caster.css') }}">
     <!-- Optional theme -->
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-theme.min.css') }}">
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('js/caster.js') }}"></script>
     </body>
 </html>
