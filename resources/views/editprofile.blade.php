@@ -16,7 +16,7 @@
                         <div class="alert alert-success">ส่งข้อมูลเรียบร้อยแล้ว</div>
                     @endif
                     <div class="row">
-                    <center><img src="{{ url('download/img') }}/{{$image}}" height="250" class="newrotate"></center>
+                    <center><img src="{{ url('download/img') }}/{{$image}}" height="250"></center>
                     <hr class="colorgraph">
                         <div class="col-xs-12 col-sm-6 col-md-6">
                             <div class="form-group">
