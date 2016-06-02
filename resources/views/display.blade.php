@@ -19,7 +19,9 @@
                         @else
                         <input type="hidden" name="diagid" value="{{ $diagid }}">
                         <div class="row">
-                        <center><img src="{{ url('download/img') }}/{{$image}}" width="400"></center>
+                        <div id="rotateQuene">
+                            <img src="{{ url('download/img') }}/{{$image}}" height="250">
+                        </div>
                         <hr class="colorgraph">
                             <div class="col-xs-12 col-sm-6 col-md-12">
                                 <div class="form-group">
@@ -80,12 +82,13 @@
                 </div>
             </div>
         </div>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/caster.css') }}">
     <!-- Optional theme -->
-    <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-theme.min.css') }}">
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('js/caster.js') }}"></script>
     </body>
 </html>

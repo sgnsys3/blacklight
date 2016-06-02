@@ -14,7 +14,6 @@ class quene extends Controller
     public function show(Request $request) {
         $info = regis_info::where("status" ,"=",1)->first();
         if($info != NULL) {
-            if($info->status == 1) {
                 return view('display' , [
                     'diagid' => $info->id ,
                     'firstname' => $info->firstname ,
@@ -31,8 +30,6 @@ class quene extends Controller
                     'tel_modeling' => $info->tel_modeling ,
                     'image' => $info->img_name ,
                     ]);
-            }
-            else return view('display' , ['empty' => 1]);
         }
         else {
             return view('display' , ['empty' => 1]);
