@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>All infomation</title>
-        <!-- <meta http-equiv="refresh" content="2" /> -->
-    </head>
-    <body>
-        <div class="container">
+@extends('layouts.app')
 
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+@section('title', 'Register')
+
+@section('content')
+
                     <h2>Blacklight Series <small>ข้อมูลนักแสดง</small></h2>
                     <hr class="colorgraph">
                     <table class="table">
@@ -31,7 +26,7 @@
                                 <td>{{ $user->firstname }}</td>
                                 <td>{{ $user->lastname }}</td>
                                 <td>{{ $user->nickname }}</td>
-                                <td><button type="button" class="btn-primary btn-block" onclick="newPage({{ $user->id }})">Edit</button>
+                                <td><button type="button" class="btn btn-primary btn-block btn-xs" onclick="newPage({{ $user->id }})">Edit</button>
                                 </td>
                                 <td>
                                     <form method="post" enctype="multipart/form-data">
@@ -51,21 +46,4 @@
                             @endforeach
                         </tbody>
                     </table>
-                    <hr class="colorgraph">
-            </div>
-        </div>
-        </div>
-
-
-    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-theme.min.css') }}">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ URL::asset('js/caster.js') }}"></script>
-    <script src="{{ URL::asset('js/jquery-2.2.4.min.js') }}"></script>
-    
-    </body>
-</html>
+                    @endsection

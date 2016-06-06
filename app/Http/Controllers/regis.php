@@ -33,7 +33,7 @@ class regis extends Controller
             $info->status = 1;
         }
         $info->save();
-        return view('welcome' , ['successful' => 1]);
+        return view('regis' , ['successful' => 1]);
     }
 
     // public function chooseType(){

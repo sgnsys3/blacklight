@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>แก้ไข ข้อมูลนักแสดง</title>
-    </head>
-    <body>
-        <div class="container">
+@extends('layouts.app')
 
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+@section('title', 'Edit Profile')
+
+@section('content')
+
                 <form role="form" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <h2>Blacklight Series <small>แก้ไข ข้อมูลนักแสดง</small></h2>
@@ -94,20 +90,5 @@
                     <div class="row">
                         <input type="submit" value="แก้ไขข้อมูล" class="btn btn-primary btn-block btn-lg" tabindex="13">
                     </div>
-                    <hr class="colorgraph">
                 </form>
-            </div>
-        </div>
-        </div>
-
-
-    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('css/caster.css') }}">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-theme.min.css') }}">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ URL::asset('js/caster.js') }}"></script>
-    </body>
-</html>
+            @endsection
