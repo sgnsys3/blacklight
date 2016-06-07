@@ -2,10 +2,11 @@
 
 @section('title', 'Register')
 
+@section('head', 'ลงทะเบียนนักแสดง')
+
 @section('content')
 
-  <h2>Blacklight Series <small>ลงทะเบียน นักแสดง</small></h2>
-  <hr>
+
   @if(isset($successful))
   <div class="alert alert-success">ส่งข้อมูลเรียบร้อยแล้ว</div>
   @endif

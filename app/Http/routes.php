@@ -14,7 +14,7 @@ Route::get('download/img/{img_name}', 'ImageController@download');
 Route::get('profile/edit/{id}', 'EditProfile@show');
 Route::post('profile/edit/{id}', 'EditProfile@submitedit');
 Route::get('/', function () {
-    return view('welcome');
+    return view('regis');
 });
 
 Route::post('/', 'regis@regis');

@@ -2,12 +2,12 @@
 
 @section('title', 'Edit Profile')
 
+@section('head', 'แก้ไขข้อมูลนักแสดง')
+
 @section('content')
 
                 <form role="form" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <h2>Blacklight Series <small>แก้ไข ข้อมูลนักแสดง</small></h2>
-                    <hr class="colorgraph">
                     @if(isset($successful))
                         <script type="text/javascript">
                             window.onload = window.close();

@@ -1,11 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Register')
-
+@section('title', 'All infomation')
+@section('head', 'ข้อมูลทั้งหมด')
 @section('content')
-
-                    <h2>Blacklight Series <small>ข้อมูลนักแสดง</small></h2>
-                    <hr class="colorgraph">
                     <table class="table">
                         <thead>
                             <th>ชื่อ</th>
@@ -33,10 +30,10 @@
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="hidden" name ="skipID" id="skipID" value="{{$user->id}}">
                                         @if($user->status == 1)
-                                            <input type="submit" value="Skip" class="btn-danger btn-block">
+                                            <input type="submit" value="Skip" class="btn btn-danger btn-block btn-xs">
                                         @else
                                             @if($user->status == 3)
-                                            <input type="submit" value="Comeback" class="btn-warning btn-block">
+                                            <input type="submit" value="Comeback" class=" btn btn-warning btn-block btn-xs">
                                             @else
                                             @endif
                                         @endif

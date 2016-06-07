@@ -34,6 +34,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    <center><h2>Blacklight Series</h2>
+                    <h4>@yield('head', 'Alternative')</h4>
+                    <hr>
+                    <h5> <a href="{{ url('/') }}">Register</a> | 
+                    <a> Upload Picture </a> | 
+                    <a href="{{ url('/getall') }}"> Edit Profile </a> | 
+                    <a href="{{ url('/quene') }}">Current Quene </a>
+                    </h5>
+                    <hr>
+                    </center>
                     @yield('content')
                     <hr>
                     @include('components.footer')
