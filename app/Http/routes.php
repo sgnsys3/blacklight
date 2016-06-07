@@ -17,9 +17,11 @@ Route::get('/', function () {
     return view('regis');
 });
 
+Route::post('api/updateTable', ['as' => 'api.updateTable', 'uses' => 'Api\updateTable@show']);
+
 Route::post('/', 'regis@regis');
 
 Route::get('/quene', 'quene@show');
 Route::post('/quene', 'quene@submitcast');
-Route::get('/getall' , 'GetAllInfo@show');
-Route::post('/getall' , 'GetAllInfo@skipUser');
+Route::get('/getall' , ['as' => 'getall', 'uses' => 'GetAllInfo@show']);
+Route::post('/getall/{skipID?}' , ['as' => 'skipID', 'uses' => 'GetAllInfo@skipUser']);

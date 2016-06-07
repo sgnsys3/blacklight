@@ -15,8 +15,12 @@ class GetAllInfo extends Controller
         return view('allinfo' , ['allinfo' => $info]);
     }
 
-    public function skipUser(Request $request) {
-    	$info = regis_info::where("id" , "=" , $request->input('skipID'))->first();
+    public function skipUser(Request $request, $skipID = null) {
+        if( null === $skipID) {
+            return abort(404);
+        }
+
+    	$info = regis_info::where("id" , "=" , $skipID)->first();
         if($info->status == 1) $info->status = 3;
         elseif ($info->status == 3) $info->status = 1;
     	$info->save();

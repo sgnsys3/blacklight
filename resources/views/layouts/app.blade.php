@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="_token" content="{{ csrf_token() }}">
 
     <title>@yield('title', 'Page') - COS : Blacklight Series</title>
 
@@ -50,11 +51,9 @@
                 </div>
             </div>
         </div>
-    <script src="{{ URL::asset('js/caster.js') }}"></script>
-
-
     <!-- jQuery -->
     <script src="{{ URL::asset('js/jquery.js') }}"></script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
@@ -67,5 +66,10 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="{{ URL::asset('js/creative.js') }}"></script>
+    <script type="text/javascript">
+        var updateUrl = "{{ route('api.updateTable') }}";
+        var skipUrl = "{{ route('getall') }}";
+    </script>
+    <script src="{{ url('js/caster.js') }}"></script>
     </body>
 </html>

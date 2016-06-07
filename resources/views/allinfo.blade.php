@@ -3,7 +3,7 @@
 @section('title', 'All infomation')
 @section('head', 'ข้อมูลทั้งหมด')
 @section('content')
-                    <table class="table">
+                    <table class="table" id="allinfo">
                         <thead>
                             <th>ชื่อ</th>
                             <th>นามสกุล</th>
@@ -26,9 +26,8 @@
                                 <td><button type="button" class="btn btn-primary btn-block btn-xs" onclick="newPage({{ $user->id }})">Edit</button>
                                 </td>
                                 <td>
-                                    <form method="post" enctype="multipart/form-data">
+                                    <form method="post" enctype="multipart/form-data" action="{{ route('skipID', $user->id) }}">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                        <input type="hidden" name ="skipID" id="skipID" value="{{$user->id}}">
                                         @if($user->status == 1)
                                             <input type="submit" value="Skip" class="btn btn-danger btn-block btn-xs">
                                         @else
