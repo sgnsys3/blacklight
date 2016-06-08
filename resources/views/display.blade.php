@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    @if(isset($empty))
-        <meta http-equiv="refresh" content="5" />
-    @endif
+    <meta name="_token" content="{{ csrf_token() }}">
     <title>Current Quene - COS : Blacklight Series</title>
 
     <!-- Bootstrap Core CSS -->
@@ -37,11 +35,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
                     <center><h2>Blacklight Series</h2>
-                    <hr>
-                    <h5> <a href="{{ url('/') }}">Register</a> | 
-                    <a> Upload Picture </a> | 
-                    <a href="{{ url('/getall') }}"> Edit Profile </a> | 
-                    <a href="{{ url('/quene') }}">Current Quene </a>
+                    <h5> จำนวนนักแสดงรอคิว : <a id="countQuene">0</a> คน
                     </h5>
                     <hr>
                     </center>
@@ -110,7 +104,6 @@
                         <div class="row">
                             <input type="submit" value="คนต่อไป" class="btn btn-success btn-block btn-lg" tabindex="7">
                         </div>
-                        <hr class="colorgraph">
                         @endif
                     </form>
                     <hr>
@@ -135,5 +128,18 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="{{ URL::asset('js/creative.js') }}"></script>
+    @if(isset($empty))
+        <script type="text/javascript">
+        var countQueneUrl = "{{ route('api.countQuene') }}";
+            $(document).ready(w8refresh());
+            var timer = setInterval(w8refresh, 1000);
+        </script>
+    @else
+        <script type="text/javascript">
+            var countQueneUrl = "{{ route('api.countQuene') }}";
+            $(document).ready(countQuene());
+            var timer = setInterval(countQuene, 2000);
+        </script>
+    @endif
     </body>
 </html>

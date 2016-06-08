@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
 
@@ -69,7 +70,9 @@
     <script type="text/javascript">
         var updateUrl = "{{ route('api.updateTable') }}";
         var skipUrl = "{{ route('getall') }}";
+        
     </script>
     <script src="{{ url('js/caster.js') }}"></script>
+    @yield('addonScript')
     </body>
 </html>

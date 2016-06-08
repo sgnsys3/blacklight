@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 Route::post('api/updateTable', ['as' => 'api.updateTable', 'uses' => 'Api\updateTable@show']);
+Route::post('api/countQuene', ['as' => 'api.countQuene', 'uses' => 'Api\countQuene@show']);
 
 Route::post('/', 'regis@regis');
 
