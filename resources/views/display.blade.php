@@ -136,9 +136,12 @@
         </script>
     @else
         <script type="text/javascript">
+            var displayID = "{{ $diagid }}";
+            var currentIDUrl = "{{ route('api.currentQuene') }}";
             var countQueneUrl = "{{ route('api.countQuene') }}";
             $(document).ready(countQuene());
             var timer = setInterval(countQuene, 2000);
+            var timer = setInterval(checkDisplay, 2000);
         </script>
     @endif
     </body>

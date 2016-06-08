@@ -2,6 +2,17 @@ function newPage(id) {
     window.open("profile/edit/"+ id,"","width=500,height=600,scrollbars=yes");
 }
 
+function checkDisplay() {
+	$.ajax({
+		url: currentIDUrl,
+		method: "POST" ,
+		data: {	_token: $('meta[name="_token"]').attr('content') },
+		success :function(response) {
+			if(response > displayID) location.reload();
+		}
+	})
+}
+
 function countQuene() {
 	$("#countQuene").unbind();
 	$.ajax({
