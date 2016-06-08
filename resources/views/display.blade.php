@@ -132,13 +132,13 @@
         <script type="text/javascript">
         var countQueneUrl = "{{ route('api.countQuene') }}";
             $(document).ready(w8refresh());
-            var timer = setInterval(w8refresh(), 1000);
+            var timer = setInterval(w8refresh, 1000);
         </script>
     @else
         <script type="text/javascript">
             var countQueneUrl = "{{ route('api.countQuene') }}";
             $(document).ready(countQuene());
-            var timer = setInterval(countQuene(), 2000);
+            var timer = setInterval(countQuene, 2000);
         </script>
     @endif
     </body>
