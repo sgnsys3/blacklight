@@ -60,7 +60,7 @@ function renderTable(data) {
 
 	$.each(data, function(index, value) {
 		var $trValue;
-		var $skipButton = value.status == 4 
+		var $skipButton = value.status == 3
 						  ? '<span skipID="'+value.id+'" class="skipButton btn btn-warning btn-block btn-xs">Come Back</span>'
 						  : '<span skipID="'+value.id+'" class="skipButton btn btn-danger btn-block btn-xs">Skip</span>';
 
