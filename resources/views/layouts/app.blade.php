@@ -40,7 +40,6 @@
                     <h4>@yield('head', 'Alternative')</h4>
                     <hr>
                     <h5> <a href="{{ url('/') }}">Register</a> | 
-                    <a> Upload Picture </a> | 
                     <a href="{{ url('/getall') }}"> Edit Profile </a> | 
                     <a href="{{ url('/quene') }}">Current Quene </a>
                     </h5>
