@@ -13,11 +13,15 @@ class Quene extends ApiController
 {
     public function count() {
         $info = regis_info::where('status','=','1')->get()->count();
-        return $info;
+        if($info == NULL)
+        	return -1;
+        else return $info;
     }
 
     public function currentID() {
     	$info = regis_info::where('status','=','1')->first();
-    	return $info->id;
+        if($info == NULL)
+        	return -1;
+        else return $info->id;
     }
 }

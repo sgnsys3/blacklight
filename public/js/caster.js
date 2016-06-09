@@ -8,7 +8,7 @@ function checkDisplay() {
 		method: "POST" ,
 		data: {	_token: $('meta[name="_token"]').attr('content') },
 		success :function(response) {
-			if(response > displayID) location.reload();
+			if(response > displayID || response == -1) location.reload();
 		}
 	})
 }
@@ -33,7 +33,7 @@ function w8refresh() {
 			method: "POST" ,
 			data: {	_token: $('meta[name="_token"]').attr('content') },
 			success :function(response) {
-				if(response != 0) location.reload();
+				if(response != -1) location.reload();
 			}
 		});
 }
